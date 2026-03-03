@@ -1,1 +1,177 @@
 
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Dashboard • Treinamento</title>
+  <meta name="description" content="Plataforma interna de treinamento." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <!-- Guard: trava acesso se não tiver token -->
+  <script src="../assets/js/app.js"></script>
+  <script>window.N1Auth.guardApp();</script>
+
+  <!-- TOPBAR APP
+       Serve para: identidade + busca + logout -->
+  <header class="app-header">
+    <div class="container app-header-inner">
+
+      <a class="brand"
+         href="https://pithermachado.github.io/treinamenton1"
+         aria-label="Voltar para a página principal do treinamento">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <strong class="brand-name">PORTAL N1</strong>
+      </a>
+
+      <div class="app-actions">
+        <input class="app-search" type="search" placeholder="Buscar módulo..." aria-label="Buscar módulo" />
+        <button class="btn btn-ghost" type="button" onclick="window.N1Auth.doLogout()">Sair</button>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="app">
+    <div class="container">
+
+      <!-- HERO APP (mini)
+           Serve para: saudação + destaque do próximo passo -->
+      <section class="app-hero">
+        <h1 class="app-title">Seu painel</h1>
+        <p class="app-subtitle">Continue de onde parou.</p>
+      </section>
+
+      <!-- GRID DE MÓDULOS (Netflix)
+           Serve para: catálogo em cards com status -->
+      <section class="section section-modules">
+        <header class="section-header">
+          <h2 class="section-title">Módulos</h2>
+          <p class="section-subtitle">Escolha um módulo para iniciar ou continuar.</p>
+        </header>
+
+        <div class="grid modules-grid">
+
+          <!-- MÓDULO 01 -->
+          <article class="card module-card">
+            <div class="module-meta">
+              <span class="module-number">01</span>
+              <span class="module-tag">Quem somos</span>
+            </div>
+            <h3 class="module-title">Cultura & Identidade</h3>
+            <p class="module-desc">
+              Entenda a estrutura da N1 Negócios, nossa missão, visão, valores, código de conduta,
+              regras internas e campanhas que sustentam a operação.
+            </p>
+            <div class="module-footer">
+              <span class="pill">Não iniciado</span>
+              <a class="btn btn-primary" href="./modulo-01.html">Abrir</a>
+            </div>
+          </article>
+
+          <!-- MÓDULO 02 -->
+          <article class="card module-card">
+            <div class="module-meta">
+              <span class="module-number">02</span>
+              <span class="module-tag">Crédito do Trabalhador</span>
+            </div>
+            <h3 class="module-title">CLT</h3>
+            <p class="module-desc">
+              Domine as regras do crédito com desconto em folha: elegibilidade, vantagens, desligamento,
+              bancos parceiros, documentação e critérios de contratação.
+            </p>
+            <div class="module-footer">
+              <span class="pill">Em andamento</span>
+              <a class="btn btn-primary" href="./modulo-02.html">Abrir</a>
+            </div>
+          </article>
+
+          <!-- MÓDULO 03 -->
+          <article class="card module-card">
+            <div class="module-meta">
+              <span class="module-number">03</span>
+              <span class="module-tag">Crédito Pessoal</span>
+            </div>
+            <h3 class="module-title">INSS</h3>
+            <p class="module-desc">
+              Conheça as regras do crédito para aposentados e pensionistas: espécies aceitas e não aceitas,
+              limites de valor, taxa, idade, estados restritos e critérios de contratação.
+            </p>
+            <div class="module-footer">
+              <span class="pill">Bloqueado</span>
+              <a class="btn btn-primary" href="./modulo-03.html">Abrir</a>
+            </div>
+          </article>
+
+          <!-- MÓDULO 04 (FEATURED) -->
+          <article class="card module-card module-card-featured">
+            <div class="module-meta">
+              <span class="module-number">04</span>
+              <span class="module-tag">Vendas • Objeções</span>
+            </div>
+
+            <h3 class="module-title">Book de Objeções</h3>
+
+            <p class="module-desc">
+              Respostas prontas + objetivo de cada resposta para contornar resistência sem discutir com o cliente.
+              Foco em abrir conversa, gerar valor e direcionar para fechamento.
+            </p>
+
+            <ul class="module-points">
+              <li>“Não tenho interesse”: abrir conversa + levar pro WhatsApp</li>
+              <li>“Juros alto”: comparar com cartão e criar uso inteligente do dinheiro</li>
+              <li>“Muitas parcelas”: reframe com consignado (96x) e vantagem do prazo</li>
+            </ul>
+
+            <div class="module-footer">
+              <span class="pill">Alta conversão</span>
+              <a class="btn btn-primary" href="./modulo-04.html">Abrir →</a>
+            </div>
+          </article>
+          
+<!-- MÓDULO 05 -->
+<article class="card module-card">
+  <div class="module-meta">
+    <span class="module-number">05</span>
+    <span class="module-tag">Vendas • Sondagem</span>
+  </div>
+
+  <h3 class="module-title">Criação de Cenários</h3>
+
+  <p class="module-desc">
+    Aprenda a construir uma história coerente com a realidade do cliente usando sondagem.
+    Objetivo: aumentar relevância, reduzir resistência e conduzir para fechamento.
+  </p>
+
+  <ul class="module-points">
+    <li>Linha do tempo: entender o cliente antes de propor</li>
+    <li>Sondagem direta: perguntas abertas e objetivas</li>
+    <li>Sondagem indireta: exemplos que “plantam ideias”</li>
+  </ul>
+
+  <div class="module-footer">
+    <span class="pill">Técnica-chave</span>
+    <a class="btn btn-primary" href="./modulo-05.html">Abrir →</a>
+  </div>
+</article>
+          
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-text">© <span id="year"></span> N1 Treinamento</p>
+      <p class="footer-text footer-muted">Plataforma interna • Caminho 1</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
