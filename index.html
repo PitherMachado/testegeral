@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N1 NEGÓCIOS V2 | Plataforma Premium</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Core -->
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body data-theme="dark">
+    <!-- UI Shell -->
+    <div id="app" style="min-height: 100vh; display: flex; flex-direction: column;"></div>
+
+    <!-- Global Edit Panel -->
+    <div id="edit-panel" class="side-panel"></div>
+
+    <!-- JS Core Layer -->
+    <script src="js/core/state.js"></script>
+    <script src="js/core/ui.js"></script>
+    <script src="js/core/interactions.js"></script>
+    <script src="js/core/router.js"></script>
+    
+    <!-- Page Definitions -->
+    <script src="js/pages/main.js"></script>
+
+    <!-- App Entry Point -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initial render
+            Router.init();
+            
+            // Handle back/forward buttons
+            window.onpopstate = () => Router.handleRoute();
+            
+            // Start at home
+            Router.renderCurrent();
+        });
+    </script>
+</body>
+</html>
